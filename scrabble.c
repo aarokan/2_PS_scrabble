@@ -19,18 +19,18 @@ int main(void)
     int score2 = compute_score(word2);
 
     // Print the winner
-    int A = "A";
-    int B = "B";
-    int a = "a";
-    int b = "b";
-    printf("A =", A);
-    printf("B =", B);
-    printf("a =", a);
-    printf("b =", b);
-    printf("A - 65 =", A - 65);
-    printf("B - 65 =", B - 65);
-    printf("toupper(a) - 65 =", toupper(a) - 65);
-    printf("toupper(b) - 65 =", toupper(b) - 65);
+    char A = 'A';
+    char B = 'B';
+    char a = 'a';
+    char b = 'b';
+    printf("A = %i\n", A);
+    printf("B = %i\n", B);
+    printf("a = %i\n", a);
+    printf("b = %i\n", b);
+    printf("A - 65 = %i\n", A - 65);
+    printf("B - 65 = %i\n", B - 65);
+    printf("toupper(a) - 65 = %i\n", toupper(a) - 65);
+    printf("toupper(b) - 65 = %i\n", toupper(b) - 65);
 }
 
 int compute_score(string word)
