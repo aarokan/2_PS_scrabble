@@ -19,6 +19,18 @@ int main(void)
     int score2 = compute_score(word2);
 
     // Print the winner
+    int A = "A";
+    int B = "B";
+    int a = "a";
+    int b = "b";
+    printf("A =", A);
+    printf("B =", B);
+    printf("a =", a);
+    printf("b =", b);
+    printf("A - 65 =", A - 65);
+    printf("B - 65 =", B - 65);
+    printf("toupper(a) - 65 =", toupper(a) - 65);
+    printf("toupper(b) - 65 =", toupper(b) - 65);
 }
 
 int compute_score(string word)
