@@ -36,4 +36,7 @@ int main(void)
 int compute_score(string word)
 {
     // compute and return score for word
+    int wordLength = strlen(word);
+    printf("compute word length: %i", wordLength);
+    printf("\n");
 }
