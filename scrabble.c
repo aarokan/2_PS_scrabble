@@ -39,4 +39,12 @@ int compute_score(string word)
     int wordLength = strlen(word);
     printf("compute word length: %i", wordLength);
     printf("\n");
+
+    for (int i = 0; i < wordLength; i++)
+    {
+        // convert ascii to alphabet number (deduct 65)
+        int alphabetNumber = toupper(word[i]) - 65;
+        printf("alphabetNumber: %i", alphabetNumber);
+        printf("\n");   
+    }
 }
