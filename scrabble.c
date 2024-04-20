@@ -19,32 +19,25 @@ int main(void)
     int score2 = compute_score(word2);
 
     // Print the winner
-    char A = 'A';
-    char B = 'B';
-    char a = 'a';
-    char b = 'b';
-    printf("A = %i\n", A);
-    printf("B = %i\n", B);
-    printf("a = %i\n", a);
-    printf("b = %i\n", b);
-    printf("A - 65 = %i\n", A - 65);
-    printf("B - 65 = %i\n", B - 65);
-    printf("toupper(a) - 65 = %i\n", toupper(a) - 65);
-    printf("toupper(b) - 65 = %i\n", toupper(b) - 65);
+    printf("player 1 score : %i", score1);
+    printf("\nplayer 2 score : %i", score2);
+    printf("\n");
 }
 
 int compute_score(string word)
 {
     // compute and return score for word
     int wordLength = strlen(word);
-    printf("compute word length: %i", wordLength);
-    printf("\n");
+
+    int wordScore = 0;
 
     for (int i = 0; i < wordLength; i++)
     {
-        // convert ascii to alphabet number (deduct 65)
+        // convert ascii to alphabet order number (deduct 65)
         int alphabetNumber = toupper(word[i]) - 65;
-        printf("alphabetNumber: %i", alphabetNumber);
-        printf("\n");   
+        
+        // add letter point to the score
+        wordScore += POINTS[alphabetNumber];
     }
+    return wordScore;
 }
