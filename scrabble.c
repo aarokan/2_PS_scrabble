@@ -19,9 +19,18 @@ int main(void)
     int score2 = compute_score(word2);
 
     // Print the winner
-    printf("player 1 score : %i", score1);
-    printf("\nplayer 2 score : %i", score2);
-    printf("\n");
+    if (score1 > score2)
+    {
+        printf("Player 1 wins!\n");
+    }
+    else if (score2 > score1)
+    {
+        printf("Player 2 wins!\n");
+    }
+    else
+    {
+        printf("Tie!\n");
+    }
 }
 
 int compute_score(string word)
