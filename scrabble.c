@@ -45,8 +45,12 @@ int compute_score(string word)
         // convert ascii to alphabet order number (deduct 65)
         int alphabetNumber = toupper(word[i]) - 65;
         
-        // add letter point to the score
-        wordScore += POINTS[alphabetNumber];
+        // if it's not a character execlude it from the score
+        if (alphabetNumber >= 0 && alphabetNumber < 26) 
+        {
+            // add letter point to the score
+            wordScore += POINTS[alphabetNumber];
+        }
     }
     return wordScore;
 }
